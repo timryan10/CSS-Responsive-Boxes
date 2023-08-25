@@ -1,3 +1,80 @@
 body {
   background: papayawhip;
 }
+
+.container{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  gap: 1em;
+}
+
+.a, .b, .f{
+  border: 1px solid black;
+  text-align: center;
+}
+
+.a{
+  min-height: 100px;
+  flex-grow: 1;
+}
+
+.b{
+  min-height: 250px;
+  flex-shrink: 1;
+}
+
+.f{
+  min-height: 100px;
+  flex-grow: 1;
+}
+
+.c, .d, .e{
+  min-width: 30%;
+  border: 1px solid black;
+  text-align: center;
+}
+.cde{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 100px;
+  flex-grow: 1;
+  margin: 1em 0 1em 0;
+}
+
+
+@media (min-width: 600px){
+  .container{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .a{
+    background-color: aqua;
+    height: 200px;
+    width: 100%;
+  }
+
+  .b{
+    max-height: 100px;
+    min-width: 80%;
+  }
+
+ .c, .d, .e{
+  min-width: 30%;
+  min-height: 150px;
+ }
+
+ .f{
+  max-width: 30%;
+  min-height: 300px;
+ }
+
+ .bcde{
+  width: 70%;
+  display: inline-flex;
+  flex-direction: column;
+ }
+}
